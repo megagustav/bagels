@@ -1,14 +1,14 @@
 /* ======================== Base styles */
 
 html {
-  color: #332b26;
+  color: #d0e7ff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.3rem;
   line-height: 1.3;
 }
 
 body {
-  background: #f9f7f4;
+  background: #2600FF;
   min-height: 101vh;
 }
 
@@ -66,12 +66,12 @@ p.gdpr {
 	padding-top: 0.875rem;
 }
 
-a {
-    color: #e86e30;
+a, .desc {
+  color: #d0e7ff;
 }
 
 a:hover {
-    color: #c6561e;
+    color: #fff;
 }
 
 i.right {
@@ -79,13 +79,15 @@ i.right {
     float: right;
 }
 
-h1 { /* Main Title */
+h1 {
+  color: #fff;
   font-size: 1.8rem;
   font-weight: normal;
   -webkit-margin-before: 0;
 }
 
-h2 { /* Article Titles */
+h2 {
+  color: #fff;
   font-size: 1.4rem;
   line-height: 1;
   letter-spacing: 0.02rem;
@@ -93,12 +95,13 @@ h2 { /* Article Titles */
 }
 
 h3 {
+  color: #fff;
   font-size: inherit;
 }
 
 blockquote {
   border-left: 4px solid #eee;
-  color: hsla(20, 80%, 28%, 1);
+  color: #fff;
   padding: 0 0.7rem;
   margin: 0rem;
   font-size: 1.1rem;
@@ -121,9 +124,16 @@ ol {
 }
 
 section {
+  padding: 2rem;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+section.intro {
+  flex-direction: row;
+  gap: 1rem;
 }
 
 /* ======================== MENU */
@@ -147,11 +157,10 @@ section {
     align-content: center;
     width: 100%;
     margin: 0;
-    flex-grow: 1
 }
 
 .bagel figure img {
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .bagel .meta {
@@ -163,6 +172,7 @@ section {
 }
 
 .name_price {
+  color: #fff;
   display: flex;
   justify-content: space-between;
 }
@@ -172,17 +182,18 @@ section {
   font-weight: 500;
 }
 
-.desc {
+.bagel .desc {
   font-size: 0.8rem;
-  opacity: 0.7;
 }
 
+.bagel .table {
+  display: flex;
+  flex-wrap: wrap;
+}
 
- /* ======================== Helper classes */
-
-section {
-	padding: 2rem;
-	margin: auto;
+.bagel .table p {
+  flex: 1 1 40%;
+  justify-content: space-between;
 }
 
 .gdpr {
@@ -205,6 +216,12 @@ section {
   section {
     max-width: 35rem;
     align-items: flex-start;
+  }
+
+  section.intro {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
   }
 
   .bagel {
